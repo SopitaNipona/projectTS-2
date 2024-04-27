@@ -1,5 +1,5 @@
 import Server from "./providers/Server";
-import {PORT,NODE_ENV} from './config';
+import { PORT,NODE_ENV } from "./config";
 import express from 'express';
 import AgenteController from "./controllers/AgenteController";
 
@@ -13,7 +13,6 @@ const server = new Server({
     controllers:[
         AgenteController.instance
     ]
-    
 });
 
 server.init();
