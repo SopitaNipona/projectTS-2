@@ -1,8 +1,8 @@
 import dynamodb from '../services/dynamodbService';
 import joi from 'joi';
 import { PREFIX_NAME } from '../config';
-import { Timestamp } from 'mongodb';
-import { Schema } from 'mongoose';
+
+
 
 const schema = joi.object().keys({
     hashKey: 'DeptoId',
@@ -15,7 +15,7 @@ const schema = joi.object().keys({
     tableName: `Departamento${PREFIX_NAME}`
 });
 
-dynamodb.createTables(schema, (err) => {
+dynamodb.createTables((err) => {
 
     if (err) {
         console.log('Error creating tables: ', err);
